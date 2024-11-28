@@ -1,0 +1,15 @@
+{
+  "name": "create-invoice-app",
+  "version": "1.0.0",
+  "description": "app to create invoice for your business",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mohamed Hassib",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^33.2.0"
+  }
+}
