@@ -1,16 +1,19 @@
-<!-- Page d'accueil -->
+<!-- Page d'accueil lorsque il n'y a pas de dossiers-->
 <!DOCTYPE html>
 <html lang="fr-CI">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'"/>
     <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'"/>
+    <link rel="stylesheet" href="style.css">
     <title>Invoice App</title>
 </head>
 <body>
-    Invoice App Starts Right Now
     <!-- <a href="anotherPageTest.html">Click here to go somewhere</a> -->
-     
+     <div class="new-folder">
+        <p>Vous n'avez aucun dossier créer</p>
+        <button>Créez-en un</button>
+     </div>
     <script src="renderer.js" type="module"></script>
 </body>
 </html>

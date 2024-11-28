@@ -4,17 +4,19 @@ const {app, BrowserWindow} = require("electron");
 const { ipcMain } = require("electron/main");
 const path = require("node:path");
 
-const createWindow = () => {
+const createWindow = () => { 
     const window = new BrowserWindow({
         width : 800,
         height : 600,
         webPreferences : {
             preload : path.join(__dirname, "preload.js"),
-        }
+        } 
     });
 
-    window.loadFile("index.html");
+    window.loadFile("index.html"); 
+
 };
+
 
 app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') app.quit()
@@ -30,6 +32,9 @@ app.whenReady().then(() => {
       if (BrowserWindow.getAllWindows().length === 0) createWindow()
     });
     ipcMain.handle("verification", () => realVerification("Final Fantasy XV"))
+    require('electron-reload')(__dirname, {
+        electron: path.join(__dirname, 'node_modules', '.bin', 'electron')
+    });
     createWindow()
 
 })

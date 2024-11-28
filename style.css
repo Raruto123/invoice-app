@@ -1,0 +1,10 @@
+:root{
+    --red-color : red;
+}
+
+
+.new-folder{
+    background-color: var(--red-color);
+    width: 25%;
+    margin: auto;
+}
